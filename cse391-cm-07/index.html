@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusMart — Filter (Buoi 7)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="cm-header">
+
+    <h1 data-testid="cm-brand">CampusMart</h1>
+
+    <nav class="cm-nav" aria-label="Menu chinh">
+        <ul>
+            <li><a href="#hero">Trang chu</a></li>
+            <li><a href="#products">San pham</a></li>
+            <li><a href="#about">Gioi thieu</a></li>
+            <li><a href="#subscribe">Dang ky</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main class="cm-main" id="main-content">
+
+<section class="cm-hero" id="hero">
+
+    <h2>Do choi cong nghe cho sinh vien</h2>
+
+    <a href="#products" class="cm-btn">
+        Xem catalog
+    </a>
+
+</section>
+
+<section id="categories">
+
+<h2>Danh muc</h2>
+
+<ul data-testid="cm-category-list">
+
+<li>Ban phim</li>
+
+<li>Chuot</li>
+
+<li>Man hinh</li>
+
+</ul>
+
+</section>
+
+<section id="products">
+
+<h2>San pham</h2>
+    <div class = "cm-grid" data-testid="cm-product-table"> </div>
+    <label for="filter-cat">Loc theo danh muc:</label>
+    <select id="filter-cat" data-testid="cm-filter-category">
+        <option value="">Tat ca</option>
+        <option value="1">Ban phim</option>
+        <option value="2">Chuot</option>
+        <option value="3">Man hinh</option>
+    </select>
+    <button type="button" id="sort-price">
+        Gia tang dan
+    </button>
+    <p data-testid="cm-visible-count"></p>
+    <section id="stats"
+    data-testid="cm-stats"
+    aria-live="polite">
+    </section>
+</section>
+
+    <section id="about">
+        <h2>Gioi thieu</h2>
+        <h2>Day la Catalog cua CampusMart</h2>
+        <H2>Lien he</H2>
+        <form>
+            <p>
+                <label for="fullname">Ho ten</label><br>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname">
+            </p>
+
+            <p >
+                <label for="message">Noi dung</label><br>
+                <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required></textarea> 
+            </p>
+
+            <button type="submit">Gửi</button>
+        </form>
+    </section>
+
+    <section id="subscribe">
+        <h2>Dang ky tin nhan</h2>
+        <form data-testid="cm-subscribe-form" action="#" method="get">
+  <fieldset>
+    <legend>Dang ky nhan tin</legend>
+
+    <p>
+      <label for="sub-name">Ho ten</label>
+      <input id="sub-name" name="name" type="text" required minlength="2" />
+    </p>
+
+    <p>
+      <label for="sub-email">Email</label>
+      <input id="sub-email" name="email" type="email" required />
+    </p>
+
+    <p>
+      <label for="sub-category">Danh muc quan tam</label>
+      <select id="sub-category" name="category_id" required>
+        <option value="">-- Chon danh muc --</option>
+        <option value="1">Ban phim</option>
+        <option value="2">Chuot</option>
+        <option value="3">Man hinh</option>
+      </select>
+    </p>
+
+    <p>
+      <button type="submit">Dang ky</button>
+    </p>
+  </fieldset>
+    </form>
+    </section>
+</main>
+
+<footer >
+    <p>&copy; 2026 CampusMart</p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<!-- CM_EXPECT product_count=8 inventory_value=41380000 js_files=data.js,app.js -->
+</html>
